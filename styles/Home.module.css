@@ -1,0 +1,158 @@
+.topPage {
+  display: flex;
+  place-items: center;
+  flex-direction: column;
+}
+.topPage img {
+  opacity: 0.4;
+  position: relative;
+}
+.text {
+  color: white;
+  position: relative;
+  text-align: center;
+  min-height: 25vh;
+}
+.text h1 {
+  font-size: 90px;
+}
+.text2 b,
+.text b {
+  color: rgb(132, 255, 132);
+}
+.text2 {
+  color: white;
+}
+.text2 li {
+  list-style: none;
+  margin-left: 100vh;
+}
+.list li {
+  list-style: none;
+  color: white;
+  margin: 15px;
+  cursor: pointer;
+}
+.list {
+  float: right;
+  transform: translateY(-180px);
+}
+.list a:hover,
+.list li:hover {
+  color: rgb(132, 255, 132);
+  transform: scale(1.05);
+  transition: all 250ms ease-in-out;
+}
+.btnD {
+  background-color: transparent;
+  border: none;
+  color: rgb(132, 255, 132);
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+.btnD svg:hover {
+  transform: scale(1.2);
+  transition: all 250ms ease-in-out;
+}
+.container h3 {
+  text-align: center;
+  color: white;
+  margin-top: 5rem;
+}
+
+.slider img {
+  border-radius: 5px;
+
+}
+.slider{
+  margin-top: 50px;
+  display: block;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+#card {
+  background-color: transparent;
+  color: white;
+}
+#about b {
+  color: rgb(132, 255, 132);
+}
+.btnCv {
+  padding: 10px 20px;
+  text-align: center;
+  border: 1px solid rgb(132, 255, 132);
+  color: rgb(132, 255, 132);
+  background-color: transparent;
+  margin-left: 15px;
+}
+.btnCv a:hover {
+  color: rgb(132, 255, 132);
+}
+#second {
+  color: white;
+  margin-top: 5rem;
+}
+.card svg {
+  margin-bottom: 2rem;
+}
+.card {
+  border: 1px solid rgb(132, 255, 132);
+  border-radius: 5px;
+  text-align: center;
+}
+
+#contact textarea,
+#contact input {
+  background-color: transparent;
+  color: white;
+  resize: none;
+}
+#contact textarea:focus,
+#contact input:focus {
+  box-shadow: none;
+  border-color: rgb(132, 255, 132);
+}
+#contact label {
+  color: white;
+}
+
+.btnSubmit {
+  padding: 10px 20px;
+  text-align: center;
+  border: 1px solid rgb(132, 255, 132);
+  color: rgb(132, 255, 132) !important;
+  background-color: transparent;
+}
+
+.container footer{
+  text-align: center;
+  color: white;
+  padding: 100px 50px 30px 50px;
+}
+.container hr{
+  color: rgb(132, 255, 132);
+}
+@media only screen and (max-width: 768px) {
+  .text {
+    min-height: 15vh;
+  }
+  .text h1 {
+    font-size: 35px;
+  }
+  .list li {
+    list-style: none;
+    color: white;
+    display: inline;
+  }
+  .list {
+ display: none;
+
+  }
+}
+#navItem{
+  cursor: pointer !important;
+}
