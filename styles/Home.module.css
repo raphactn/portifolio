@@ -196,7 +196,13 @@
   }
 
 }
+@media only screen and (max-width: 450px) {
+  .projects img{
+    width: 250px;
+    height: 200px;
+  }
 
+}
 #navItem {
   cursor: pointer !important;
 }
