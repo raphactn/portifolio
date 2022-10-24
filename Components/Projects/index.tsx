@@ -59,7 +59,7 @@ export const Projects = ({ data }: GitData) => {
           fontSize="2xl"
           textAlign={{ base: "center", md: "left" }}
           mt={5}
-          mb={5}
+          mb={10}
         >
           Projetos
         </Heading>
@@ -68,7 +68,7 @@ export const Projects = ({ data }: GitData) => {
             <motion.div animate={animation} key={i}>
               <Box
                 rounded={"lg"}
-                minH="240px"
+                minH={'100%'}
                 bg={colorMode === "light" ? "white" : "gray.800"}
                 boxShadow="rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px"
                 p="3"

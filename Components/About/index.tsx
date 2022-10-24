@@ -65,11 +65,6 @@ export const About = () => {
         flexDirection={{ base: "column", md: "row" }}
       >
         <Center>
-          <ChevronLeftIcon
-            fontSize="30px"
-            cursor="pointer"
-            onClick={onToggle}
-          />
           <Box
             bg={useColorModeValue("gray.100", "gray.900")}
             overflowX="auto"
@@ -93,11 +88,6 @@ export const About = () => {
                   possa ter resultado e ser visto no mercado. Sempre procurando
                   as melhores práticas e me aperfeiçoando cada vez mais.
                 </Text>
-                <Button colorScheme="teal" variant="outline" size="sm" mt={5}>
-                  <a href="/linkedin_profile.pdf" download>
-                    Download CV
-                  </a>
-                </Button>
               </Box>
             ) : (
               <Box>
@@ -139,12 +129,24 @@ export const About = () => {
                 </SimpleGrid>
               </Box>
             )}
+            <Center justifyContent="space-between" alignItems={'end'} gap={5} mt={5}>
+              <Box>
+                <Button colorScheme="teal" variant="outline" size="sm" mt={5}>
+                  <a href="/linkedin_profile.pdf" download>
+                    Download CV
+                  </a>
+                </Button>
+              </Box>
+              <Center>
+                <Text fontWeight={'bold'}>{!isOpen ? "Minhas Skills" : "Sobre mim"}</Text>
+                <ChevronRightIcon
+                  fontSize="30px"
+                  cursor="pointer"
+                  onClick={onToggle}
+                />
+              </Center>
+            </Center>
           </Box>
-          <ChevronRightIcon
-            fontSize="30px"
-            cursor="pointer"
-            onClick={onToggle}
-          />
         </Center>
       </Center>
     </Container>
