@@ -94,7 +94,7 @@ export const About = () => {
                 <Heading fontSize="large">Minhas Skills</Heading>
                 <Divider mb={5} mt={5} />
                 <SimpleGrid
-                  columns={{ base: 2, md: 5, lg: 7, xl: skills.length }}
+                  columns={{ base: 3, md: 5, lg: 7, xl: skills.length }}
                   spacing={5}
                   whiteSpace="nowrap"
                 >
@@ -137,12 +137,11 @@ export const About = () => {
                   </a>
                 </Button>
               </Box>
-              <Center>
+              <Center onClick={onToggle}>
                 <Text fontWeight={'bold'}>{!isOpen ? "Minhas Skills" : "Sobre mim"}</Text>
                 <ChevronRightIcon
                   fontSize="30px"
                   cursor="pointer"
-                  onClick={onToggle}
                 />
               </Center>
             </Center>
