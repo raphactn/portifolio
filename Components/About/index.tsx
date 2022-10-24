@@ -1,5 +1,5 @@
 import { ChevronLeftIcon, ChevronRightIcon } from "@chakra-ui/icons";
-import { motion } from "framer-motion"
+import { motion } from "framer-motion";
 import {
   Container,
   Text,
@@ -86,17 +86,17 @@ export const About = () => {
                   Tenho 23 anos e possuo 3 anos de experiência no mercado
                   atuando como Desenvolvedor web Full Stack. Liderei projetos de
                   e-commerce e desenvolvimento de paginas para conversão de
-                  clientes, em meu primeiro emprego como desenvolvedor. <br/>
-                  
-                  Com a experiência
-                  que obtive no meu primeiro emprego hoje atendo empresas que
-                  precisam de Landing Pages e e-commerces, sempre utilizando as
-                  melhores estrátegias para que meu cliente possa ter resultado
-                  e ser visto no mercado. Sempre procurando as melhores práticas
-                  e me aperfeiçoando cada vez mais.
+                  clientes, em meu primeiro emprego como desenvolvedor. <br />
+                  Com a experiência que obtive no meu primeiro emprego hoje
+                  atendo empresas que precisam de Landing Pages e e-commerces,
+                  sempre utilizando as melhores estrátegias para que meu cliente
+                  possa ter resultado e ser visto no mercado. Sempre procurando
+                  as melhores práticas e me aperfeiçoando cada vez mais.
                 </Text>
                 <Button colorScheme="teal" variant="outline" size="sm" mt={5}>
-                  Download CV
+                  <a href="/linkedin_profile.pdf" download>
+                    Download CV
+                  </a>
                 </Button>
               </Box>
             ) : (
@@ -110,30 +110,30 @@ export const About = () => {
                 >
                   {skills.map((item, i) => (
                     <motion.div
-                    initial={{opacity: 0, x: '-150%' }}
-                    animate={isOpen ? { opacity: 1 , x: '0px'} : {}}
-                    transition={{duration: 0.7}} 
-                    key={i}
+                      initial={{ opacity: 0, x: "-150%" }}
+                      animate={isOpen ? { opacity: 1, x: "0px" } : {}}
+                      transition={{ duration: 0.7 }}
+                      key={i}
                     >
-                    <Center
-                      flexDirection="column"
-                      rounded={"lg"}
-                      bg={colorMode === "light" ? "white" : "gray.800"}
-                      boxShadow="rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px"
-                      p="3"
-                    >
-                      <Box fontSize="30px" color={colorMode}>
-                        {item.icon}
-                      </Box>
-                      <Text>{item.name}</Text>
-                      <Progress
-                        w="100%"
-                        mt={3}
-                        colorScheme="teal"
-                        size="sm"
-                        value={item.progress}
-                      />
-                    </Center>
+                      <Center
+                        flexDirection="column"
+                        rounded={"lg"}
+                        bg={colorMode === "light" ? "white" : "gray.800"}
+                        boxShadow="rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px"
+                        p="3"
+                      >
+                        <Box fontSize="30px" color={colorMode}>
+                          {item.icon}
+                        </Box>
+                        <Text>{item.name}</Text>
+                        <Progress
+                          w="100%"
+                          mt={3}
+                          colorScheme="teal"
+                          size="sm"
+                          value={item.progress}
+                        />
+                      </Center>
                     </motion.div>
                   ))}
                 </SimpleGrid>

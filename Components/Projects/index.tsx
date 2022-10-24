@@ -17,7 +17,7 @@ import GitData from "../../types/GitData";
 import { useEffect, useRef } from "react";
 
 export const Projects = ({ data }: GitData) => {
-  const { colorMode, toggleColorMode } = useColorMode();
+  const { colorMode } = useColorMode();
   const ref = useRef(null);
   const isInView = useInView(ref);
   const animation = useAnimation();
@@ -25,14 +25,13 @@ export const Projects = ({ data }: GitData) => {
   useEffect(() => {
     if (isInView) {
       animation.start({
-        y: "20px",
         scale: 1.1,
         margin: 5,
         transition: { type: "spring", duration: 1, bounce: 0 },
       });
     } else {
       animation.start({
-        y: "100vw",
+        scale: 0,
       });
     }
   }, [isInView]);
@@ -49,6 +48,7 @@ export const Projects = ({ data }: GitData) => {
 
   return (
     <Box
+      id="projects"
       ref={ref}
       pb={20}
       pt={10}

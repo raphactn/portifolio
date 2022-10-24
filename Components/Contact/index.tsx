@@ -93,7 +93,7 @@ export const Contact = () => {
 
   return (
     <Container maxW="container.xl" ref={ref}>
-      <Box borderRadius="lg" p={{ base: 5, lg: 16 }}>
+      <Box borderRadius="lg" p={{ base: 5, lg: 16 }} id="contact">
         <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
           <Box display={{ base: "none", md: "block" }}>
             <Lottie
@@ -169,11 +169,11 @@ export const Contact = () => {
                     ) : (
                       <Box>
                         <Lottie
-                        options={sendEmailOptions}
-                        width={120}
-                        isStopped={animationControl.isStopped}
-                        isPaused={animationControl.isPaused}
-                      />
+                          options={sendEmailOptions}
+                          width={120}
+                          isStopped={animationControl.isStopped}
+                          isPaused={animationControl.isPaused}
+                        />
                       </Box>
                     )}
                   </VStack>
