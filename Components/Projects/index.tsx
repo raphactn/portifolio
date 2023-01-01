@@ -68,29 +68,41 @@ export const Projects = ({ data }: GitData) => {
             <motion.div animate={animation} key={i}>
               <Box
                 rounded={"lg"}
-                minH={'100%'}
+                h="250"
                 bg={colorMode === "light" ? "white" : "gray.800"}
                 boxShadow="rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px"
                 p="3"
               >
-                <Flex direction="column" gap={3}>
-                  <Text fontSize={"larger"} fontWeight={"bold"}>
-                    {repo.name}
-                  </Text>
-                  <Text>{repo.description}</Text>
-                  {repo.language && (
-                    <Tag
-                      size={"md"}
-                      variant="outline"
-                      w="-webkit-max-content"
-                      colorScheme={languageColor(repo.language)}
-                    >
-                      <TagLabel>{repo.language}</TagLabel>
-                    </Tag>
-                  )}
+                <Flex
+                  direction="column"
+                  gap={3}
+                  justifyContent="space-between"
+                  h="100%"
+                >
+                  <Box>
+                    <Text fontSize={"larger"} fontWeight={"bold"}>
+                      {repo.name}
+                    </Text>
+                    <Text>{repo.description}</Text>
+                    {repo.language && (
+                      <Tag
+                        size={"md"}
+                        mt={2}
+                        variant="outline"
+                        w="-webkit-max-content"
+                        colorScheme={languageColor(repo.language)}
+                      >
+                        <TagLabel>{repo.language}</TagLabel>
+                      </Tag>
+                    )}
+                  </Box>
                   <Link
                     href={
-                      repo.homepage ? `https://${repo.homepage}` : repo.html_url
+                      repo.homepage && repo.homepage.startsWith("https")
+                        ? repo.homepage
+                        : repo.homepage
+                        ? `https://${repo.homepage}`
+                        : repo.html_url
                     }
                     target="_blank"
                   >
