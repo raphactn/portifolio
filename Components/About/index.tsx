@@ -78,15 +78,24 @@ export const About = () => {
                   Olá meu nome é Raphael Caetano
                 </Heading>
                 <Text>
-                  Tenho 23 anos e possuo 3 anos de experiência no mercado
-                  atuando como Desenvolvedor web Full Stack. Liderei projetos de
-                  e-commerce e desenvolvimento de paginas para conversão de
-                  clientes, em meu primeiro emprego como desenvolvedor. <br />
-                  Com a experiência que obtive no meu primeiro emprego hoje
-                  atendo empresas que precisam de Landing Pages e e-commerces,
-                  sempre utilizando as melhores estrátegias para que meu cliente
-                  possa ter resultado e ser visto no mercado. Sempre procurando
-                  as melhores práticas e me aperfeiçoando cada vez mais.
+                  Desenvolvedor web full stack com expertise em tecnologias como
+                  Node.js, React.js, TypeScript e Next.js. Habilidoso em
+                  linguagens como HTML5, CSS e JavaScript, além de possuir
+                  conhecimentos em prisma, chakra ui, Socket.io, PostgreSQL,
+                  Express.js, Material-UI e Sequelize.js. Com experiência em
+                  desenvolvimento web e programação lógica, tenho habilidades em
+                  Git para controle de versão e colaboração em projetos em
+                  equipe. Meu objetivo é contribuir para projetos de sucesso,
+                  agregando valor com soluções eficazes e criativas. Sempre fui
+                  apaixonado por desafios e aprendizados constantes. Durante
+                  minha jornada como Desenvolvedor tenho tido experiências
+                  incríveis e desenvolvido habilidades valiosas que me permitem
+                  buscar novas oportunidades e crescer ainda mais. Meu objetivo
+                  é encontrar um ambiente dinâmico e colaborativo onde possa
+                  aplicar minhas habilidades e conhecimentos para contribuir de
+                  forma significativa para o sucesso da empresa. Estou sempre
+                  aberto a novas oportunidades e desafios que possam me fazer
+                  crescer pessoal e profissionalmente.
                 </Text>
               </Box>
             ) : (
@@ -129,7 +138,12 @@ export const About = () => {
                 </SimpleGrid>
               </Box>
             )}
-            <Center justifyContent="space-between" alignItems={'end'} gap={5} mt={5}>
+            <Center
+              justifyContent="space-between"
+              alignItems={"end"}
+              gap={5}
+              mt={5}
+            >
               <Box>
                 <Button colorScheme="teal" variant="outline" size="sm" mt={5}>
                   <a href="/linkedin_profile.pdf" download>
@@ -138,11 +152,10 @@ export const About = () => {
                 </Button>
               </Box>
               <Center onClick={onToggle}>
-                <Text fontWeight={'bold'}>{!isOpen ? "Minhas Skills" : "Sobre mim"}</Text>
-                <ChevronRightIcon
-                  fontSize="30px"
-                  cursor="pointer"
-                />
+                <Text fontWeight={"bold"}>
+                  {!isOpen ? "Minhas Skills" : "Sobre mim"}
+                </Text>
+                <ChevronRightIcon fontSize="30px" cursor="pointer" />
               </Center>
             </Center>
           </Box>

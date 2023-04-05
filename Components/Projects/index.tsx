@@ -68,7 +68,7 @@ export const Projects = ({ data }: GitData) => {
             <motion.div animate={animation} key={i}>
               <Box
                 rounded={"lg"}
-                h="250"
+                h="100%"
                 bg={colorMode === "light" ? "white" : "gray.800"}
                 boxShadow="rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px"
                 p="3"
